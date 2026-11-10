@@ -1,0 +1,20 @@
+# Copias del SII con datos personales reales (calificaciones, pagos, CURP, NSS...)
+muestras/
+
+# Originales en alta resolución; la extensión usa las versiones de assets/
+images/
+
+# Documentos sueltos
+*.pdf
+
+# Paquetes y llaves de firma de la extensión
+*.zip
+*.crx
+*.pem
+
+# Sistema y editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

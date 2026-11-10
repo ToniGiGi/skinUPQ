@@ -1,0 +1,212 @@
+/* ---------- Tema general para las páginas internas (jQuery EasyUI + Symfony 1.x) ----------
+   Regla de oro: EasyUI calcula tamaños por JavaScript usando bordes y paddings, así que aquí
+   cambiamos colores, tipografía y esquinas, pero NO anchos de borde ni dimensiones de layout. */
+
+html:not(.skinupq-off) body {
+  font-family: var(--sk-font) !important;
+  color: var(--sk-text);
+  background: var(--sk-bg) !important;
+  -webkit-font-smoothing: antialiased;
+}
+html:not(.skinupq-off) body,
+html:not(.skinupq-off) td,
+html:not(.skinupq-off) th,
+html:not(.skinupq-off) input,
+html:not(.skinupq-off) select,
+html:not(.skinupq-off) textarea,
+html:not(.skinupq-off) button {
+  font-family: var(--sk-font);
+}
+html:not(.skinupq-off) a { color: var(--sk-navy-2); }
+html:not(.skinupq-off) h1,
+html:not(.skinupq-off) h2,
+html:not(.skinupq-off) h3 { color: var(--sk-text); font-weight: 650; letter-spacing: -.01em; }
+
+/* Encabezado propio del SII */
+html:not(.skinupq-off) #header .titulo1 {
+  font-family: var(--sk-font); font-weight: 700; letter-spacing: -.01em; color: var(--sk-navy);
+}
+html:not(.skinupq-off) #header .titulo2 {
+  font-family: var(--sk-font); font-style: normal; font-size: .8em;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--sk-red) !important;
+}
+
+/* Layout */
+html:not(.skinupq-off) .layout-panel,
+html:not(.skinupq-off) .layout-body { background: var(--sk-bg); }
+html:not(.skinupq-off) .layout-split-west,
+html:not(.skinupq-off) .layout-split-east,
+html:not(.skinupq-off) .layout-split-north,
+html:not(.skinupq-off) .layout-split-south { border-color: transparent; }
+html:not(.skinupq-off) .layout-split-proxy-h,
+html:not(.skinupq-off) .layout-split-proxy-v { background: var(--sk-navy-2); opacity: .3; }
+html:not(.skinupq-off) .layout-expand,
+html:not(.skinupq-off) .layout-button-left,
+html:not(.skinupq-off) .layout-button-right { opacity: .7; }
+
+/* Paneles */
+html:not(.skinupq-off) .panel-header,
+html:not(.skinupq-off) .window-header,
+html:not(.skinupq-off) .accordion-header {
+  background: var(--sk-surface) !important;
+  border-color: var(--sk-border) !important;
+  filter: none !important;
+}
+html:not(.skinupq-off) .panel-title {
+  font-family: var(--sk-font); font-size: 13px; font-weight: 650; color: var(--sk-text);
+}
+html:not(.skinupq-off) .panel-body {
+  background-color: var(--sk-surface);
+  border-color: var(--sk-border);
+  color: var(--sk-text);
+}
+html:not(.skinupq-off) .panel-tool a { opacity: .55; border-radius: 4px; }
+html:not(.skinupq-off) .panel-tool a:hover { opacity: 1; background-color: var(--sk-hover); }
+
+/* Menú lateral (accordion) */
+html:not(.skinupq-off) .accordion { background: var(--sk-surface); border-color: var(--sk-border); }
+html:not(.skinupq-off) .accordion .accordion-header .panel-title {
+  font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--sk-muted);
+}
+html:not(.skinupq-off) .accordion .accordion-header-selected {
+  background: var(--sk-navy) !important;
+}
+html:not(.skinupq-off) .accordion .accordion-header-selected .panel-title { color: #fff; }
+html:not(.skinupq-off) .accordion-body a,
+html:not(.skinupq-off) .accordion-body li a {
+  color: var(--sk-text); text-decoration: none; border-radius: var(--sk-radius-sm);
+}
+html:not(.skinupq-off) .accordion-body a:hover { background: var(--sk-hover); color: var(--sk-navy-2); }
+
+/* Árboles (menús tipo tree) */
+html:not(.skinupq-off) .tree-node { border-radius: var(--sk-radius-sm); }
+html:not(.skinupq-off) .tree-node-hover { background: var(--sk-hover); color: var(--sk-text); }
+html:not(.skinupq-off) .tree-node-selected { background: var(--sk-selected); color: var(--sk-navy); font-weight: 600; }
+html:not(.skinupq-off) .tree-title { font-size: 13px; }
+
+/* Pestañas */
+html:not(.skinupq-off) .tabs-header,
+html:not(.skinupq-off) .tabs-tool { background: var(--sk-bg); border-color: var(--sk-border); }
+html:not(.skinupq-off) .tabs-wrap,
+html:not(.skinupq-off) ul.tabs { background: transparent; border-color: var(--sk-border); }
+html:not(.skinupq-off) .tabs li a.tabs-inner {
+  background: transparent !important; filter: none !important;
+  border-color: transparent; border-radius: var(--sk-radius-sm) var(--sk-radius-sm) 0 0;
+  color: var(--sk-muted); font-weight: 500;
+}
+html:not(.skinupq-off) .tabs li a.tabs-inner:hover { background: var(--sk-hover) !important; color: var(--sk-text); }
+html:not(.skinupq-off) .tabs li.tabs-selected a.tabs-inner {
+  background: var(--sk-surface) !important;
+  border-color: var(--sk-border); border-bottom-color: var(--sk-surface);
+  color: var(--sk-navy); font-weight: 650;
+  box-shadow: inset 0 2px 0 var(--sk-red);
+}
+html:not(.skinupq-off) .tabs-panels { border-color: var(--sk-border); background: var(--sk-surface); }
+
+/* Tablas de datos (datagrid) */
+html:not(.skinupq-off) .datagrid-header,
+html:not(.skinupq-off) .datagrid-htable,
+html:not(.skinupq-off) .datagrid-header-row {
+  background: var(--sk-surface-2) !important; filter: none !important;
+}
+html:not(.skinupq-off) .datagrid-header td,
+html:not(.skinupq-off) .datagrid-body td,
+html:not(.skinupq-off) .datagrid-footer td { border-color: var(--sk-border); }
+html:not(.skinupq-off) .datagrid-header .datagrid-cell span {
+  font-size: 12px; font-weight: 650; color: var(--sk-muted);
+  text-transform: uppercase; letter-spacing: .04em;
+}
+html:not(.skinupq-off) .datagrid-body td { border-right-color: transparent; }
+html:not(.skinupq-off) .datagrid-cell { font-size: 13px; color: var(--sk-text); }
+html:not(.skinupq-off) .datagrid-row-alt { background: var(--sk-surface-2); }
+html:not(.skinupq-off) .datagrid-row-over,
+html:not(.skinupq-off) .datagrid-header td.datagrid-header-over { background: var(--sk-hover) !important; }
+html:not(.skinupq-off) .datagrid-row-selected { background: var(--sk-selected) !important; color: var(--sk-navy); }
+html:not(.skinupq-off) .datagrid-pager,
+html:not(.skinupq-off) .datagrid-toolbar { background: var(--sk-surface-2); border-color: var(--sk-border); }
+
+/* Tablas HTML "clásicas" dentro de las páginas */
+html:not(.skinupq-off) .panel-body table:not([class*="datagrid"]):not(.layout) th,
+html:not(.skinupq-off) .container table th {
+  background: var(--sk-surface-2); color: var(--sk-muted);
+  font-size: 12px; font-weight: 650; text-transform: uppercase; letter-spacing: .03em;
+}
+
+/* Botones */
+html:not(.skinupq-off) a.l-btn {
+  background: var(--sk-surface) !important; filter: none !important;
+  border-color: var(--sk-border) !important; border-radius: var(--sk-radius-sm);
+  color: var(--sk-text);
+}
+html:not(.skinupq-off) a.l-btn:hover { background: var(--sk-hover) !important; border-color: #c9d3ec !important; }
+html:not(.skinupq-off) a.l-btn-plain { background: transparent !important; border-color: transparent !important; }
+html:not(.skinupq-off) a.l-btn-plain:hover { background: var(--sk-hover) !important; }
+html:not(.skinupq-off) a.l-btn .l-btn-text { font-weight: 500; }
+
+html:not(.skinupq-off) input.submit,
+html:not(.skinupq-off) input[type="submit"]:not(.sk-submit),
+html:not(.skinupq-off) input[type="button"],
+html:not(.skinupq-off) button:not(#skinupq-root *):not(#sk-appbar *):not(#sk-profile *):not(#sk-tray *):not(#sk-seg *):not(#sk-des *):not(#sk-pers *):not(#sk-becas *):not(#sk-pagos *):not(#sk-panel *):not(#sk-bolsa *):not(#sk-medico *):not(#sk-orient *):not(#sk-le *) {
+  background: var(--sk-navy-2); color: #fff;
+  border: 1px solid var(--sk-navy-2); border-radius: var(--sk-radius-sm);
+  padding: 6px 14px; font: 600 13px var(--sk-font); cursor: pointer;
+}
+html:not(.skinupq-off) input.submit:hover,
+html:not(.skinupq-off) input[type="submit"]:not(.sk-submit):hover,
+html:not(.skinupq-off) input[type="button"]:hover,
+html:not(.skinupq-off) button:not(#skinupq-root *):not(#sk-appbar *):not(#sk-profile *):not(#sk-tray *):not(#sk-seg *):not(#sk-des *):not(#sk-pers *):not(#sk-becas *):not(#sk-pagos *):not(#sk-panel *):not(#sk-bolsa *):not(#sk-medico *):not(#sk-orient *):not(#sk-le *):hover { filter: brightness(1.12); }
+
+/* Campos de texto (sin cambiar alto: EasyUI lo calcula) */
+html:not(.skinupq-off) input[type="text"],
+html:not(.skinupq-off) input[type="password"],
+html:not(.skinupq-off) select,
+html:not(.skinupq-off) textarea,
+html:not(.skinupq-off) .combo,
+html:not(.skinupq-off) .textbox,
+html:not(.skinupq-off) .spinner {
+  border-color: #cfd6e4; border-radius: var(--sk-radius-sm);
+  background-color: var(--sk-surface); color: var(--sk-text);
+}
+html:not(.skinupq-off) input[type="text"]:focus,
+html:not(.skinupq-off) input[type="password"]:focus,
+html:not(.skinupq-off) select:focus,
+html:not(.skinupq-off) textarea:focus {
+  outline: none; border-color: var(--sk-navy-2);
+  box-shadow: 0 0 0 3px rgba(35, 59, 143, .12);
+}
+html:not(.skinupq-off) .combo .combo-text,
+html:not(.skinupq-off) .combo input { border: 0; box-shadow: none; }
+html:not(.skinupq-off) .combo-arrow { background-color: transparent; opacity: .6; }
+
+/* Ventanas y diálogos */
+html:not(.skinupq-off) .window {
+  background: var(--sk-surface) !important; border-color: var(--sk-border) !important;
+  border-radius: var(--sk-radius); box-shadow: var(--sk-shadow-lg);
+}
+html:not(.skinupq-off) .window-shadow { display: none !important; }
+html:not(.skinupq-off) .window-mask { background: rgba(16, 24, 48, .45); opacity: 1; filter: none; }
+html:not(.skinupq-off) .messager-body { font-size: 14px; }
+
+/* Menús contextuales / desplegables */
+html:not(.skinupq-off) .menu,
+html:not(.skinupq-off) .combo-panel {
+  background: var(--sk-surface) !important; border-color: var(--sk-border) !important;
+  border-radius: var(--sk-radius-sm); box-shadow: var(--sk-shadow);
+}
+html:not(.skinupq-off) .menu-active,
+html:not(.skinupq-off) .combobox-item-hover { background: var(--sk-hover) !important; border-color: transparent !important; border-radius: 4px; }
+html:not(.skinupq-off) .menu-shadow { display: none !important; }
+
+/* Cajas de información del SII */
+html:not(.skinupq-off) .info-box {
+  border-radius: var(--sk-radius); border-color: var(--sk-border);
+  background-color: var(--sk-surface);
+}
+
+/* Scrollbars discretas */
+html:not(.skinupq-off) ::-webkit-scrollbar { width: 10px; height: 10px; }
+html:not(.skinupq-off) ::-webkit-scrollbar-thumb {
+  background: #c7cedc; border-radius: 10px; border: 2px solid transparent; background-clip: content-box;
+}
+html:not(.skinupq-off) ::-webkit-scrollbar-thumb:hover { background-color: #aab3c6; }
+html:not(.skinupq-off) ::-webkit-scrollbar-track { background: transparent; }

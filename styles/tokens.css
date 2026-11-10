@@ -1,0 +1,27 @@
+/* Paleta y medidas compartidas.
+   Basada en el azul y rojo de la UPQ, pero desaturada para un look más sobrio. */
+html:not(.skinupq-off) {
+  --sk-ink: #0f1b2d;          /* fondo oscuro / overlay de la foto */
+  --sk-navy: #1f3a5f;         /* color primario (botones, foco) */
+  --sk-navy-2: #2b4c78;
+  --sk-navy-hover: #182f4e;
+  --sk-red: #a3333d;          /* acento puntual (no para superficies grandes) */
+  --sk-red-soft: #e7b7bc;     /* acento sobre fondos oscuros */
+
+  --sk-bg: #f6f7f9;
+  --sk-surface: #ffffff;
+  --sk-surface-2: #f8f9fb;
+  --sk-border: #e2e6ec;
+  --sk-text: #0f172a;
+  --sk-muted: #64748b;
+  --sk-subtle: #94a3b8;
+  --sk-hover: #f1f4f8;
+  --sk-selected: #e6edf6;
+
+  --sk-radius: 10px;
+  --sk-radius-sm: 6px;
+  --sk-shadow: 0 1px 2px rgba(15, 23, 42, .05), 0 4px 16px rgba(15, 23, 42, .05);
+  --sk-shadow-lg: 0 10px 40px rgba(15, 23, 42, .14);
+  --sk-font: "Inter", "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  --sk-font-display: "Inter", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+}

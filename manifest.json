@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "SkinUPQ",
+  "version": "0.15.0",
+  "description": "Interfaz moderna para el Sistema Integral de Información (SII) de la UPQ. Solo cambia la apariencia; no toca el backend.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "SkinUPQ",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://sistemaintegral.upq.edu.mx/*"],
+      "css": ["styles/tokens.css", "styles/theme.css", "styles/auth.css", "styles/app.css", "styles/trayectoria.css", "styles/seguimiento.css", "styles/desempeno.css", "styles/personal.css", "styles/becas.css", "styles/pagos.css", "styles/panel.css", "styles/bolsa.css", "styles/medico.css", "styles/orientacion.css", "styles/le.css"],
+      "js": ["scripts/toggle.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://sistemaintegral.upq.edu.mx/*"],
+      "js": ["scripts/icons.js", "scripts/trayectoria.js", "scripts/seguimiento.js", "scripts/desempeno.js", "scripts/personal.js", "scripts/becas.js", "scripts/pagos.js", "scripts/panel.js", "scripts/bolsa.js", "scripts/medico.js", "scripts/orientacion.js", "scripts/le.js", "scripts/auth.js", "scripts/extras.js", "scripts/app.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://sistemaintegral.upq.edu.mx/*"],
+      "js": ["scripts/bridge.js"],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["https://sistemaintegral.upq.edu.mx/*"]
+    }
+  ]
+}
